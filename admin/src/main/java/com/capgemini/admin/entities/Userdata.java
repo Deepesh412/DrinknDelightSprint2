@@ -11,22 +11,22 @@ import javax.persistence.Table;
 @Table(name="userdata")
 public class Userdata implements Serializable{
 	@Id
-	@Column(name="user_id")
+	@Column(name="user_id",length=7)
 	private int userid;
 	
-	@Column(name="user_name")
+	@Column(name="user_name",length=15)
 	private String username;
 	
-	@Column(name="user_type")
+	@Column(name="user_type",length=9)
 	private String usertype;
 	
-	@Column(name="user_password")
+	@Column(name="user_password",length=15)
 	private String userpassword;
 	
-	@Column(name="user_phone")
+	@Column(name="user_phone",length=12)
 	private long userphone;
 	
-	@Column(name="user_email")
+	@Column(name="user_email",length=25)
 	private String useremail;
 	
 	public Userdata() {

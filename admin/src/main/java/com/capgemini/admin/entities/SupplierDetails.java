@@ -12,19 +12,19 @@ import javax.persistence.Table;
 public class SupplierDetails implements Serializable {
 	
 	@Id
-	@Column(name ="supplier_id")
+	@Column(name ="supplier_id",length=7)
 	private int supplierId;
 	
-	@Column(name = "supplier_name")
+	@Column(name = "supplier_name",length=15)
 	private String supplierName;
 	
-	@Column(name = "address")
+	@Column(name = "address",length=50)
 	private String address;
 	
-	@Column(name = "phone_number")
+	@Column(name = "phone_number",length=12)
 	private long phonenumber;
 	
-	@Column(name = "email_id")
+	@Column(name = "email_id",length=25)
 	private String emailId;
     
 	public SupplierDetails() {
