@@ -17,19 +17,19 @@ import javax.persistence.Table;
 public class ProductStock implements Serializable{
 	
 	@Id
-	@Column(name = "product_id")
+	@Column(name = "product_id",length=7)
 	private int productId;
 	
-	@Column(name = "item_name")
+	@Column(name = "item_name",length=15)
 	private String itemName;
 	
-	@Column(name = "price_per_unit")
+	@Column(name = "price_per_unit",length=5)
 	private double pricePerUnit;
 	
-	@Column(name="manufacturing_date")
+	@Column(name="manufacturing_date",length=11)
 	private Date manufacturingDate;
 	
-	@Column(name="expiry_date")
+	@Column(name="expiry_date",length=11)
 	private Date expiryDate;
 	
 	@OneToOne(cascade = CascadeType.ALL)

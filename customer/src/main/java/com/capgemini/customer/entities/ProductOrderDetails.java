@@ -6,7 +6,9 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -14,35 +16,36 @@ import javax.persistence.Table;
 public class ProductOrderDetails implements Serializable {
 	
 	@Id
-//	@GeneratedValue
-	@Column(name = "order_id")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "orderId_Sequence")
+	@SequenceGenerator(name = "orderId_Sequence", sequenceName = "order_id_SEQ")
+	@Column(name = "order_id",length=7)
 	private int orderId;
 
-	@Column(name = "product_id")
+	@Column(name = "product_id",length=7)
 	private int productId;
 	
-	@Column(name = "distributor_id")
+	@Column(name = "distributor_id",length=7)
 	private int distributorId;
 	
-	@Column(name = "item_name")
+	@Column(name = "item_name",length=15)
 	private String itemName;
 	
-	@Column(name = "price_per_unit")
+	@Column(name = "price_per_unit",length=7)
 	private double pricePerUnit;
 
-	@Column(name = "quantity_unit")
+	@Column(name = "quantity_unit",length=7)
 	private int quantityUnit;
 	
-	@Column(name = "total_price")
+	@Column(name = "total_price",length=9)
 	private double totalPrice;
 	
-	@Column(name = "order_date")
+	@Column(name = "order_date",length=11)
 	private Date orderDate;
 	
-	@Column(name = "delivery_date")
+	@Column(name = "delivery_date",length=11)
 	private Date deliveryDate;
 	
-	@Column(name = "delivery_status")
+	@Column(name = "delivery_status",length=15)
 	private String deliveryStatus;
 
 	

@@ -11,19 +11,19 @@ import javax.persistence.Table;
 @Table(name = "distributordetails")
 public class DistributorDetails implements Serializable{
 	@Id
-	@Column(name ="distributor_id")
+	@Column(name ="distributor_id",length=7)
 	private int distributorId;
 	
-	@Column(name = "distributor_name")
+	@Column(name = "distributor_name",length=15)
 	private String distributorName;
 	
-	@Column(name = "address")
+	@Column(name = "address",length=50)
 	private String address;
 	
-	@Column(name = "phone_number")
+	@Column(name = "phone_number",length=12)
 	private long phonenumber;
 	
-	@Column(name = "email_id")
+	@Column(name = "email_id",length=25)
 	private String emailId;
 	
 	
